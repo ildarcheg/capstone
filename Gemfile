@@ -17,5 +17,10 @@ group :development, :test do
   gem 'httparty', '~>0.14', '>=0.14.0'
 end
 
+group :production do
+  gem 'rails_12factor', '~>0.0', '>= 0.0.3'
+end
+
 gem 'pg', '0.20.0'
+gem 'puma', '~>3.6', '>=3.6.0', :platforms=>:ruby
 gem 'mongoid', '~>5.1', '>=5.1.5'
