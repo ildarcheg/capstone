@@ -3,5 +3,8 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+	City.delete_all;
+	State.delete_all;
+	city = City.create([{ name: 'Baltimore' }])
+    state = State.create(:name=>'Maryland')
+
