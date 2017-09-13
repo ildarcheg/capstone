@@ -34,8 +34,8 @@ RSpec.describe "ApiDevelopments", type: :request do
     
     it "expose State-backed API resource" do
       object=State.create(:name=>"test")
-      expect(bars_path).to eq("/api/states")
-      get bar_path(object.id) 
+      expect(states_path).to eq("/api/states")
+      get state_path(object.id) 
       expect(response).to have_http_status(:ok)
       expect(parsed_body["name"]).to eq("test")
     end
