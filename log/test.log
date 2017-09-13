@@ -141,3 +141,47 @@ Processing by StatesController#show as JSON
   Rendered states/show.json.jbuilder (6.7ms)
 Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
   [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "cities"[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "test"], ["created_at", "2017-09-13 07:22:03.778635"], ["updated_at", "2017-09-13 07:22:03.778635"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mCity Load (0.2ms)[0m  [1mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT 1[0m  [["id", 13]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "cities"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "cities"[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "test"], ["created_at", "2017-09-13 07:22:03.791231"], ["updated_at", "2017-09-13 07:22:03.791231"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/api/cities/14" for 127.0.0.1 at 2017-09-13 14:22:03 +0700
+Processing by CitiesController#show as JSON
+  Parameters: {"id"=>"14"}
+  [1m[36mCity Load (0.4ms)[0m  [1mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT 1[0m  [["id", 14]]
+  Rendered cities/_city.json.jbuilder (0.8ms)
+  Rendered cities/show.json.jbuilder (6.5ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.4ms)
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "cities"
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/api/states/59b8dc9bcbbed12a67a9649a" for 127.0.0.1 at 2017-09-13 14:22:03 +0700
+Processing by StatesController#show as JSON
+  Parameters: {"id"=>"59b8dc9bcbbed12a67a9649a"}
+  Rendered states/_state.json.jbuilder (0.6ms)
+  Rendered states/show.json.jbuilder (1.5ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Started GET "/api/states/59b8dcd5cbbed12a7baaa0ce" for 127.0.0.1 at 2017-09-13 14:23:01 +0700
+Processing by StatesController#show as JSON
+  Parameters: {"id"=>"59b8dcd5cbbed12a7baaa0ce"}
+  Rendered states/_state.json.jbuilder (0.8ms)
+  Rendered states/show.json.jbuilder (9.3ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
