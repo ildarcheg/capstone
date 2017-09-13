@@ -8,6 +8,8 @@ RSpec.describe "ApiDevelopments", type: :request do
     after(:each)  { City.delete_all }
 
     it "create City-backed model" do
+      puts 'sdf'
+      puts ObjectSpace.each_object
       object=City.create(:name=>"test")
       expect(City.find(object.id).name).to eq("test")
     end
