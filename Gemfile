@@ -13,6 +13,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 3.5', '>=3.5.2'
   gem 'byebug', '~>9.0', '>=9.0.6'
+  gem 'httparty', '~>0.14', '>=0.14.0'
 end
 
 gem 'pg', '0.20.0'
