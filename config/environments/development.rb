@@ -32,7 +32,7 @@ Rails.application.configure do
   config.assets.digest = true
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  config.force_ssl = true
+  #config.force_ssl = true
   
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
